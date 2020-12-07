@@ -31,7 +31,7 @@ const NavBarAdmin = ({ classes, handleDrawerOpen, open }) => {
           noWrap
           className={classes.title}
         >
-          Dashboard
+          <img src="/logo.gif" width="80" height="50" alt="logo-icon" />
         </Typography>
         <IconButton color="inherit">
           {/* <Badge badgeContent={4} color="secondary">

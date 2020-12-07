@@ -8,8 +8,6 @@ import SearchApplicants from "./Search";
 import Data_1 from "./Data_1";
 import Data_2 from "./Data_2";
 
-//TODO: Acceder a detalles del perfil del aplicante
-//TODO: reporte numero de aplicantes, numero de aplicantes registrados en el último mes, número de aplicantes que fueron eliminados o que cerraron cuenta
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,

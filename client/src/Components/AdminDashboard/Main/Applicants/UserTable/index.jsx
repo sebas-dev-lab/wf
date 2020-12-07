@@ -64,11 +64,16 @@ export default function DenseTable() {
             : rows
           ).map((row) => (
             <>
-              <TableRow key={row.id} onClick={moldaChange}>
-                <TableCell align="center" component="th" scope="row">
+              <TableRow key={row.id}>
+                <TableCell
+                  align="center"
+                  onClick={moldaChange}
+                  component="th"
+                  scope="row"
+                >
                   {row.id}
                 </TableCell>
-                <TableCell align="center">
+                <TableCell align="center" onClick={moldaChange}>
                   {row.name + " " + row.lastName}
                 </TableCell>
                 <TableCell align="center">
