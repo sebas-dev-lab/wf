@@ -54,12 +54,8 @@ export default function Dashboard() {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
-          <Container maxWidth="lg" className={classes.container}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={4} lg={3}>
-                <MainAdmin />
-              </Grid>
-            </Grid>
+          <Container maxWidth="lg" className={classes.container} spacing={1}>
+            <MainAdmin />
           </Container>
         </main>
       </Router>

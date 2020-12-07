@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
   },
   appBar: {
-    // overflow: "visible",
+    overflow: "visible",
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -28,6 +28,7 @@ export const useStyles = makeStyles((theme) => ({
     }),
   },
   appBarShift: {
+    overflow: "hidden",
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
@@ -45,6 +46,7 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   drawerPaper: {
+    overflow: "visible",
     position: "relative",
     whiteSpace: "nowrap",
     width: drawerWidth,
@@ -71,8 +73,10 @@ export const useStyles = makeStyles((theme) => ({
     overflow: "auto",
   },
   container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   paper: {
     padding: theme.spacing(2),
