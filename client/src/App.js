@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
-import AdminDashboard from "./Components/AdminDashboard";
+import React from "react";
+import Dashboard from "./Components/AdminDashboard";
 
 function App() {
-  return <AdminDashboard />;
+  return <Dashboard />;
 }
-
 export default App;

@@ -9,6 +9,7 @@ import BarChartIcon from "@material-ui/icons/BarChart";
 import SendIcon from "@material-ui/icons/Send";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import { Link } from "react-router-dom";
 
 export const mainListItems = (
@@ -47,17 +48,6 @@ export const mainListItems = (
       </ListItem>
     </Link>
     <Link
-      to="/admin/reports"
-      style={{ textDecoration: "none", color: "black" }}
-    >
-      <ListItem button>
-        <ListItemIcon>
-          <BarChartIcon />
-        </ListItemIcon>
-        <ListItemText primary="Reports" />
-      </ListItem>
-    </Link>
-    <Link
       to="/admin/messages"
       style={{ textDecoration: "none", color: "black" }}
     >
@@ -76,21 +66,9 @@ export const secondaryListItems = (
     <ListSubheader inset>Production</ListSubheader>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AttachMoneyIcon />
       </ListItemIcon>
       <ListItemText primary="Current month" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Last quarter" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
     </ListItem>
   </div>
 );
