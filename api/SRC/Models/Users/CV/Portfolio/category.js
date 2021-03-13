@@ -3,7 +3,7 @@ var autoIncrement = require("mongoose-auto-increment"); //no modificar
 autoIncrement.initialize(connection);
 const findOrCreate = require("mongoose-findorcreate");
 
-const portfolioSchema = new Schema({
+const categorySchema = new Schema({
   code: {
     type: Number,
     default: 0,
@@ -16,31 +16,19 @@ const portfolioSchema = new Schema({
   description: {
     type: String,
   },
-  start_date: {
-    type: String,
-  },
-  end_date: {
-    type: String,
-  },
-  client: {
-    type: String,
-  },
-  url: {
-    type: String,
-  },
 });
 
-portfolioSchema.plugin(require("mongoose-autopopulate"));
+categorySchema.plugin(require("mongoose-autopopulate"));
 
-portfolioSchema.plugin(autoIncrement.plugin, {
-  model: "Portfolio",
+categorySchema.plugin(autoIncrement.plugin, {
+  model: "Category",
   field: "code",
   startAt: 1,
   incrementBy: 1,
 });
 
-portfolioSchema.plugin(findOrCreate);
+categorySchema.plugin(findOrCreate);
 
-const Portfolio = model("Portfolio", portfolioSchema);
+const Category = model("Category", categorySchema);
 
-module.exports = Portfolio;
+module.exports = Category;

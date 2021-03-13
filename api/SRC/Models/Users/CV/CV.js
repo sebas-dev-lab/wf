@@ -37,6 +37,10 @@ const user_cv_Schema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Portfolio",
   },
+  contact: {
+    type: Schema.Types.ObjectId,
+    ref: "Contact",
+  },
   testimonials: {
     Type: Schema.Types.ObjectId,
     ref: "Testimonials",
