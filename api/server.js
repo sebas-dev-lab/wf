@@ -1,12 +1,18 @@
 const express = require("express");
+const morgan = require("morgan");
+const cors = require("cors");
+require("dotenv").config();
+
+// Server
 const app = express();
+app.set("port", process.env.PORT || 3001);
 
-const PORT = 3001;
+// Middlewares
+app.use(cors());
+app.use(morgan("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.send("Servidor corriendo");
-});
+// Routes
 
-app.listen(PORT, () => {
-  console.log("Server on PORT: ", PORT);
-});
+module.exports = app;
