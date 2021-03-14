@@ -28,6 +28,14 @@ const portfolioSchema = new Schema({
   url: {
     type: String,
   },
+  img: {
+    type: Schema.Types.ObjectId,
+    ref: "Img",
+  },
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: "Category",
+  },
 });
 
 portfolioSchema.plugin(require("mongoose-autopopulate"));
